@@ -28,7 +28,7 @@ func (server *Server) createAccount(ctx *gin.Context) {
 		Currency: req.Currency,
 		Balance:  0,
 	}
-
+	// "test"
 	account, err := server.store.CreateAccount(ctx, arg)
 	if err != nil {
 		if pqErr, ok := err.(*pq.Error); ok {
